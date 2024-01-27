@@ -57,12 +57,10 @@ __webpack_require__.d(__webpack_exports__, {
 
 
 var App = function(param) {
-    var title = param.title, onClick = param.onClick;
-    (0, react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function() {
-        if (onClick) alert("hello");
-    }, [
-        onClick
-    ]);
+    var title = param.title, _param_onClick = param.onClick, onClick = _param_onClick === void 0 ? function() {} : _param_onClick;
+    onClick(function() {
+        alert("hello");
+    });
     return /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
         style: {
             borderRadius: "4px",
