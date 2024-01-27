@@ -1,12 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-const App = ({ title, onClick }) => {
+const App = ({ title, onClick = () => {} }) => {
 
-  useEffect(() => {
-    if(onClick){
-      alert('hello');
-    }
-  }, [onClick])
+  onClick(() => {
+    alert("hello");
+  });
 
   return (
     <div
