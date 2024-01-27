@@ -57,16 +57,20 @@ __webpack_require__.d(__webpack_exports__, {
 
 
 var App = function(param) {
-    var title = param.title;
+    var title = param.title, onClick = param.onClick;
+    (0, react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function() {
+        if (onClick) alert("hello");
+    }, [
+        onClick
+    ]);
     return /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
         style: {
             borderRadius: "4px",
             padding: "2em",
-            backgroundColor: "red",
             color: "white"
         },
         "data-e2e": "APP_2__WIDGET",
-        children: title
+        children: "this will alert user when button is clicked"
     });
 };
 var __WEBPACK_DEFAULT_EXPORT__ = App;
