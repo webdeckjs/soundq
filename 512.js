@@ -1,4 +1,4 @@
-(self['webpackChunkwebdeck_plugin_template'] = self['webpackChunkwebdeck_plugin_template'] || []).push([["512"], {
+(self['webpackChunksoundq'] = self['webpackChunksoundq'] || []).push([["512"], {
 "418": (function (module) {
 /*
 object-assign

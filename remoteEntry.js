@@ -1,4 +1,4 @@
-var plugin;
+var soundq;
 (function() {
 var __webpack_modules__ = {
 "638": (function (__unused_webpack_module, exports, __webpack_require__) {
@@ -3413,15 +3413,15 @@ __webpack_require__.d(exports, {
 	get: () => (__webpack_require__.getContainer),
 	init: () => (__webpack_require__.initContainer)
 });}),
-"403": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"448": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */var _home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/soundQ/soundQ/node_modules/@rspack/core/node_modules/@module-federation/webpack-bundler-runtime/dist/index.cjs.js */"426");
-/* harmony import */var _home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */var _home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/soundq/soundq/node_modules/@rspack/core/node_modules/@module-federation/webpack-bundler-runtime/dist/index.cjs.js */"426");
+/* harmony import */var _home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0__);
 
 const __module_federation_runtime_plugins__ = [];
 const __module_federation_remote_infos__ = {};
-const __module_federation_container_name__ = "plugin";
+const __module_federation_container_name__ = "soundq";
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m;
 if (__webpack_require__.initializeSharingData || __webpack_require__.initializeExposesData) {
     const override = (obj, key, value)=>{
@@ -3452,7 +3452,7 @@ if (__webpack_require__.initializeSharingData || __webpack_require__.initializeE
     const initializeSharingInitPromises = [];
     const initializeSharingInitTokens = [];
     const containerShareScope = (_l = __webpack_require__.initializeExposesData) === null || _l === void 0 ? void 0 : _l.containerShareScope;
-    early(__webpack_require__, "federation", ()=>(_home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default()));
+    early(__webpack_require__, "federation", ()=>(_home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default()));
     early(__webpack_require__.federation, "consumesLoadingModuleToHandlerMapping", ()=>{
         const consumesLoadingModuleToHandlerMapping = {};
         for (let [moduleId, data] of Object.entries(consumesLoadingModuleToConsumeDataMapping))consumesLoadingModuleToHandlerMapping[moduleId] = {
@@ -3516,9 +3516,9 @@ if (__webpack_require__.initializeSharingData || __webpack_require__.initializeE
         }
         return idToRemoteMap;
     });
-    override(__webpack_require__, "S", (_home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().bundlerRuntime.S));
-    if ((_home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().attachShareScopeMap)) _home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().attachShareScopeMap(__webpack_require__);
-    override(__webpack_require__.f, "remotes", (chunkId, promises)=>_home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().bundlerRuntime.remotes({
+    override(__webpack_require__, "S", (_home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().bundlerRuntime.S));
+    if ((_home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().attachShareScopeMap)) _home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().attachShareScopeMap(__webpack_require__);
+    override(__webpack_require__.f, "remotes", (chunkId, promises)=>_home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().bundlerRuntime.remotes({
             chunkId,
             promises,
             chunkMapping: remotesLoadingChunkMapping,
@@ -3526,7 +3526,7 @@ if (__webpack_require__.initializeSharingData || __webpack_require__.initializeE
             idToRemoteMap: __webpack_require__.federation.bundlerRuntimeOptions.remotes.idToRemoteMap,
             webpackRequire: __webpack_require__
         }));
-    override(__webpack_require__.f, "consumes", (chunkId, promises)=>_home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().bundlerRuntime.consumes({
+    override(__webpack_require__.f, "consumes", (chunkId, promises)=>_home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().bundlerRuntime.consumes({
             chunkId,
             promises,
             chunkMapping: consumesLoadingChunkMapping,
@@ -3534,14 +3534,14 @@ if (__webpack_require__.initializeSharingData || __webpack_require__.initializeE
             installedModules: consumesLoadinginstalledModules,
             webpackRequire: __webpack_require__
         }));
-    override(__webpack_require__, "I", (name, initScope)=>_home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().bundlerRuntime.I({
+    override(__webpack_require__, "I", (name, initScope)=>_home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().bundlerRuntime.I({
             shareScopeName: name,
             initScope,
             initPromises: initializeSharingInitPromises,
             initTokens: initializeSharingInitTokens,
             webpackRequire: __webpack_require__
         }));
-    override(__webpack_require__, "initContainer", (shareScope, initScope, remoteEntryInitOptions)=>_home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().bundlerRuntime.initContainerEntry({
+    override(__webpack_require__, "initContainer", (shareScope, initScope, remoteEntryInitOptions)=>_home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().bundlerRuntime.initContainerEntry({
             shareScope,
             initScope,
             remoteEntryInitOptions,
@@ -3557,12 +3557,12 @@ if (__webpack_require__.initializeSharingData || __webpack_require__.initializeE
         __webpack_require__.R = undefined;
         return getScope;
     });
-    (_home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().instance) = _home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().runtime.init((_home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().initOptions));
-    if ((_m = __webpack_require__.consumesLoadingData) === null || _m === void 0 ? void 0 : _m.initialConsumes) _home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().bundlerRuntime.installInitialConsumes({
+    (_home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().instance) = _home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().runtime.init((_home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().initOptions));
+    if ((_m = __webpack_require__.consumesLoadingData) === null || _m === void 0 ? void 0 : _m.initialConsumes) _home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().bundlerRuntime.installInitialConsumes({
         webpackRequire: __webpack_require__,
         installedModules: consumesLoadinginstalledModules,
         initialConsumes: __webpack_require__.consumesLoadingData.initialConsumes,
-        moduleToHandlerMapping: (_home_runner_work_soundQ_soundQ_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().consumesLoadingModuleToHandlerMapping)
+        moduleToHandlerMapping: (_home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0___default().consumesLoadingModuleToHandlerMapping)
     });
 }
 }),
@@ -3607,7 +3607,7 @@ __webpack_require__.e = function (chunkId) {
 }();
 // webpack/runtime/load_chunk_with_block
 !function() {
-var map = {"202@": ["987"], "358@./Plugin": ["702", "990"], "435@": ["512"], "478@": ["512"], "537@0:21": ["702"], "741@": ["987", "702"]};
+var map = {"155@": ["512"], "358@./Plugin": ["637", "990"], "537@0:21": ["637"], "734@": ["512"], "871@": ["987", "637"], "886@": ["987"]};
 
 __webpack_require__.el = function(module) {
   var chunkIds = map[module];
@@ -3664,7 +3664,7 @@ __webpack_require__.n = function (module) {
 !function() {
 
 __webpack_require__.S = {};
-__webpack_require__.initializeSharingData = { scopeToSharingDataMapping: { "default": [{ name: "react-dom", version: "16.14.0", factory: function() { return __webpack_require__.el("741@").then(function() { return function() { return __webpack_require__(/*! /home/runner/work/soundQ/soundQ/node_modules/react-dom/index.js */"935"); }; }); }, eager: 0 }, { name: "react", version: "16.14.0", factory: function() { return __webpack_require__.el("435@").then(function() { return function() { return __webpack_require__(/*! /home/runner/work/soundQ/soundQ/node_modules/react/index.js */"294"); }; }); }, eager: 0 }] }, uniqueName: "webdeck-plugin-template" };
+__webpack_require__.initializeSharingData = { scopeToSharingDataMapping: { "default": [{ name: "react-dom", version: "16.14.0", factory: function() { return __webpack_require__.el("871@").then(function() { return function() { return __webpack_require__(/*! /home/runner/work/soundq/soundq/node_modules/react-dom/index.js */"935"); }; }); }, eager: 0 }, { name: "react", version: "16.14.0", factory: function() { return __webpack_require__.el("734@").then(function() { return function() { return __webpack_require__(/*! /home/runner/work/soundq/soundq/node_modules/react/index.js */"294"); }; }); }, eager: 0 }] }, uniqueName: "soundq" };
 __webpack_require__.I = function() { throw new Error("should have __webpack_require__.I") }
 
 }();
@@ -3694,7 +3694,7 @@ __webpack_require__.I = function() { throw new Error("should have __webpack_requ
 !function() {
 var inProgress = {};
 
-var dataWebpackPrefix = "webdeck-plugin-template:";
+var dataWebpackPrefix = "soundq:";
 // loadScript function to load a script via script tag
 __webpack_require__.l = function (url, done, key, chunkId) {
 	if (inProgress[url]) {
@@ -3767,7 +3767,7 @@ __webpack_require__.g = (function () {
 // webpack/runtime/consumes_loading
 !function() {
 
-__webpack_require__.consumesLoadingData = { chunkMapping: {"987":[],"990":[],"512":[],"702":["478"]}, moduleIdToConsumeDataMapping: { "478": { shareScope: "default", shareKey: "react", import: "react", requiredVersion: "^16.13.0", strictVersion: false, singleton: true, eager: false, fallback: function() { return __webpack_require__.el("478@").then(function() { return function() { return __webpack_require__(/*! react */"294"); }; }); } } }, initialConsumes: [] };
+__webpack_require__.consumesLoadingData = { chunkMapping: {"987":[],"990":[],"512":[],"637":["155"]}, moduleIdToConsumeDataMapping: { "155": { shareScope: "default", shareKey: "react", import: "react", requiredVersion: "^16.13.0", strictVersion: false, singleton: true, eager: false, fallback: function() { return __webpack_require__.el("155@").then(function() { return function() { return __webpack_require__(/*! react */"294"); }; }); } } }, initialConsumes: [] };
 __webpack_require__.f.consumes = function() { throw new Error("should have __webpack_require__.f.consumes") }
 }();
 // webpack/runtime/jsonp_chunk_loading
@@ -3776,7 +3776,7 @@ __webpack_require__.f.consumes = function() { throw new Error("should have __web
       // object to store loaded and loading chunks
       // undefined = chunk not loaded, null = chunk preloaded/prefetched
       // [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-      var installedChunks = {"950": 0,};
+      var installedChunks = {"733": 0,};
       
         __webpack_require__.f.j = function (chunkId, promises) {
           // JSONP chunk loading for javascript
@@ -3790,7 +3790,7 @@ if (installedChunkData !== 0) {
 	if (installedChunkData) {
 		promises.push(installedChunkData[2]);
 	} else {
-		if ("702" != chunkId) {
+		if ("637" != chunkId) {
 			// setup Promise in chunk cache
 			var promise = new Promise(function (resolve, reject) {
 				installedChunkData = installedChunks[chunkId] = [resolve, reject];
@@ -3863,7 +3863,7 @@ var webpackJsonpCallback = function (parentChunkLoadingFunction, data) {
 	
 };
 
-var chunkLoadingGlobal = self["webpackChunkwebdeck_plugin_template"] = self["webpackChunkwebdeck_plugin_template"] || [];
+var chunkLoadingGlobal = self["webpackChunksoundq"] = self["webpackChunksoundq"] || [];
 chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 chunkLoadingGlobal.push = webpackJsonpCallback.bind(
 	null,
@@ -3908,8 +3908,8 @@ __webpack_require__.getContainer = function() { throw new Error("should have __w
     __webpack_require__.p = scriptUrl
     
 }();
-__webpack_require__("403");
-var __webpack_exports__ = __webpack_require__("358");plugin = __webpack_exports__;
+__webpack_require__("448");
+var __webpack_exports__ = __webpack_require__("358");soundq = __webpack_exports__;
 
 })()
 
