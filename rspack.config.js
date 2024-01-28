@@ -1,6 +1,6 @@
 const { HtmlRspackPlugin, container: {ModuleFederationPlugin} } = require('@rspack/core');
 const path = require('path');
-const deps = require('./package.json').dependencies;
+const package = require('./package.json');
 
 module.exports = {
   entry: './src/index',
@@ -44,21 +44,21 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'plugin',
+      name: package.name,
       filename: 'remoteEntry.js',
       exposes: {
         './Plugin': './src/App',
       },
       shared: {
         react: {
-          requiredVersion: deps.react,
+          requiredVersion: package.dependencies.react,
           import: 'react', // the "react" package will be used a provided and fallback module
           shareKey: 'react', // under this name the shared module will be placed in the share scope
           shareScope: 'default', // share scope with this name will be used
           singleton: true, // only a single version of the shared module is allowed
         },
         'react-dom': {
-          requiredVersion: deps['react-dom'],
+          requiredVersion: package.dependencies['react-dom'],
           singleton: true, // only a single version of the shared module is allowed
         },
       },

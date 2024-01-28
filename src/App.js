@@ -11,6 +11,7 @@ const App = ({ title, onClick = () => {} }) => {
       style={{
         borderRadius: '4px',
         padding: '2em',
+        background: "orange",
         color: 'white',
       }}
       data-e2e="APP_2__WIDGET"
