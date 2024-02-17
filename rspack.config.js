@@ -44,7 +44,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: package.name,
+      name: `${package.name}_local`,
       filename: 'remoteEntry.js',
       exposes: {
         './Plugin': './src/App',
