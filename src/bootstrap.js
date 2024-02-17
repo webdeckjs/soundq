@@ -5,4 +5,4 @@ import ReactDOM from 'react-dom';
 // Nothing needs to chagne here.
 // Make all changes in <App> component.
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App config={{}} setConfig={() => {}} />, document.getElementById('root'));
