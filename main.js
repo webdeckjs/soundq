@@ -3408,7 +3408,7 @@ module.exports = federation;
 "537": (function (__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 __webpack_require__.el("537@0:21").then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */"447"));
 }),
-"448": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"673": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */var _home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/soundq/soundq/node_modules/@rspack/core/node_modules/@module-federation/webpack-bundler-runtime/dist/index.cjs.js */"426");
@@ -3416,7 +3416,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const __module_federation_runtime_plugins__ = [];
 const __module_federation_remote_infos__ = {};
-const __module_federation_container_name__ = "soundq";
+const __module_federation_container_name__ = "soundq_local";
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m;
 if (__webpack_require__.initializeSharingData || __webpack_require__.initializeExposesData) {
     const override = (obj, key, value)=>{
@@ -3890,7 +3890,7 @@ chunkLoadingGlobal.push = webpackJsonpCallback.bind(
     __webpack_require__.p = scriptUrl
     
 }();
-__webpack_require__("448");
+__webpack_require__("673");
 var __webpack_exports__ = __webpack_require__("537");
 })()
 

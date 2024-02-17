@@ -48,28 +48,167 @@ module.exports = __webpack_require__(/*! ./cjs/react-jsx-runtime.production.min.
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
-  "default": function() { return __WEBPACK_DEFAULT_EXPORT__; }
+  "default": function() { return __WEBPACK_DEFAULT_EXPORT__; },
+  onPress: function() { return onPress; }
 });
 /* harmony import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */"893");
 /* harmony import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */"155");
 /* harmony import */var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-
-
-var App = function(param) {
-    var title = param.title, _param_onClick = param.onClick, onClick = _param_onClick === void 0 ? function() {} : _param_onClick;
-    onClick(function() {
-        alert("hello");
+function _define_property(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
     });
+    else obj[key] = value;
+    return obj;
+}
+function _object_spread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {};
+        var ownKeys = Object.keys(source);
+        if (typeof Object.getOwnPropertySymbols === "function") ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function(sym) {
+            return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+        }));
+        ownKeys.forEach(function(key) {
+            _define_property(target, key, source[key]);
+        });
+    }
+    return target;
+}
+function ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+    if (Object.getOwnPropertySymbols) {
+        var symbols = Object.getOwnPropertySymbols(object);
+        if (enumerableOnly) symbols = symbols.filter(function(sym) {
+            return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+        });
+        keys.push.apply(keys, symbols);
+    }
+    return keys;
+}
+function _object_spread_props(target, source) {
+    source = source != null ? source : {};
+    if (Object.getOwnPropertyDescriptors) Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    else ownKeys(Object(source)).forEach(function(key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+    });
+    return target;
+}
+
+
+var context = new AudioContext();
+ var onPress = function(param) {
+    var config = param.config;
+    var o = context.createOscillator();
+    var g = context.createGain();
+    o.type = config.waveform || "sine";
+    o.frequency.value = config.frequency || 100;
+    o.connect(g);
+    g.connect(context.destination);
+    o.start(0);
+    g.gain.exponentialRampToValueAtTime(config.ramp || 1.0, context.currentTime + 2);
+    o.stop(context.currentTime + 2);
+};
+var App = function(param) {
+    var config = param.config, setConfig = param.setConfig;
+    var onChange = function(event) {
+        console.log(event.target.name, event.target.value);
+        setConfig(_object_spread_props(_object_spread({}, config), _define_property({}, event.target.name, event.target.value)));
+    };
     return /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
         style: {
-            borderRadius: "4px",
-            padding: "2em",
-            background: "orange",
-            color: "white"
+            height: "100%",
+            background: "pink"
         },
-        "data-e2e": "APP_2__WIDGET",
-        children: "this will alert user when button is clicked"
+        children: /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+            style: {
+                padding: "2em"
+            },
+            children: [
+                /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h3", {
+                    children: "soundq plugin"
+                }),
+                /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                    className: "settings",
+                    children: [
+                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: "setting",
+                            children: [
+                                /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("label", {
+                                    htmlFor: "waveform",
+                                    children: "waveform: "
+                                }),
+                                /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("select", {
+                                    required: true,
+                                    name: "waveform",
+                                    onChange: onChange,
+                                    value: config.waveform || "",
+                                    children: [
+                                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                                            value: "",
+                                            disabled: true,
+                                            hidden: true,
+                                            children: "sine"
+                                        }),
+                                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                                            value: "sine",
+                                            children: "sine"
+                                        }),
+                                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                                            value: "square",
+                                            children: "square"
+                                        }),
+                                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                                            value: "sawtooth",
+                                            children: "sawtooth"
+                                        }),
+                                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                                            value: "triangle",
+                                            children: "triangle"
+                                        })
+                                    ]
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: "setting",
+                            children: [
+                                /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("label", {
+                                    htmlFor: "frequency",
+                                    children: "frequency: "
+                                }),
+                                /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                                    type: "text",
+                                    name: "frequency",
+                                    placeholder: "403",
+                                    onChange: onChange,
+                                    value: config.frequency || ""
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: "setting",
+                            children: [
+                                /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("label", {
+                                    htmlFor: "ramp",
+                                    children: "exponential ramp: "
+                                }),
+                                /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                                    type: "text",
+                                    name: "ramp",
+                                    placeholder: "1.0",
+                                    onChange: onChange,
+                                    value: config.ramp || ""
+                                })
+                            ]
+                        })
+                    ]
+                })
+            ]
+        })
     });
 };
 var __WEBPACK_DEFAULT_EXPORT__ = App;

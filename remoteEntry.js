@@ -1,4 +1,4 @@
-var soundq;
+var soundq_local;
 (function() {
 var __webpack_modules__ = {
 "638": (function (__unused_webpack_module, exports, __webpack_require__) {
@@ -3413,7 +3413,7 @@ __webpack_require__.d(exports, {
 	get: () => (__webpack_require__.getContainer),
 	init: () => (__webpack_require__.initContainer)
 });}),
-"448": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"673": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */var _home_runner_work_soundq_soundq_node_modules_rspack_core_node_modules_module_federation_webpack_bundler_runtime_dist_index_cjs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/soundq/soundq/node_modules/@rspack/core/node_modules/@module-federation/webpack-bundler-runtime/dist/index.cjs.js */"426");
@@ -3421,7 +3421,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const __module_federation_runtime_plugins__ = [];
 const __module_federation_remote_infos__ = {};
-const __module_federation_container_name__ = "soundq";
+const __module_federation_container_name__ = "soundq_local";
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m;
 if (__webpack_require__.initializeSharingData || __webpack_require__.initializeExposesData) {
     const override = (obj, key, value)=>{
@@ -3776,7 +3776,7 @@ __webpack_require__.f.consumes = function() { throw new Error("should have __web
       // object to store loaded and loading chunks
       // undefined = chunk not loaded, null = chunk preloaded/prefetched
       // [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-      var installedChunks = {"733": 0,};
+      var installedChunks = {"350": 0,};
       
         __webpack_require__.f.j = function (chunkId, promises) {
           // JSONP chunk loading for javascript
@@ -3908,8 +3908,8 @@ __webpack_require__.getContainer = function() { throw new Error("should have __w
     __webpack_require__.p = scriptUrl
     
 }();
-__webpack_require__("448");
-var __webpack_exports__ = __webpack_require__("358");soundq = __webpack_exports__;
+__webpack_require__("673");
+var __webpack_exports__ = __webpack_require__("358");soundq_local = __webpack_exports__;
 
 })()
 
