@@ -229,7 +229,10 @@ __webpack_require__.r(__webpack_exports__);
 
 // Nothing needs to chagne here.
 // Make all changes in <App> component.
-react_dom__WEBPACK_IMPORTED_MODULE_3___default().render(/*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_App__WEBPACK_IMPORTED_MODULE_1__["default"], {}), document.getElementById("root"));
+react_dom__WEBPACK_IMPORTED_MODULE_3___default().render(/*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_App__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    config: {},
+    setConfig: function() {}
+}), document.getElementById("root"));
 }),
 
 }]);
