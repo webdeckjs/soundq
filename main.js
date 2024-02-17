@@ -3602,7 +3602,7 @@ __webpack_require__.e = function (chunkId) {
 }();
 // webpack/runtime/load_chunk_with_block
 !function() {
-var map = {"155@": ["512"], "358@./Plugin": ["637"], "537@0:21": ["637", "425"], "734@": ["512"], "871@": ["987", "637"], "886@": ["987"]};
+var map = {"261@": ["987"], "358@./Plugin": ["106"], "458@": ["512"], "537@0:21": ["106", "425"], "719@": ["512"], "939@": ["987", "106"]};
 
 __webpack_require__.el = function(module) {
   var chunkIds = map[module];
@@ -3659,7 +3659,7 @@ __webpack_require__.n = function (module) {
 !function() {
 
 __webpack_require__.S = {};
-__webpack_require__.initializeSharingData = { scopeToSharingDataMapping: { "default": [{ name: "react-dom", version: "16.14.0", factory: function() { return __webpack_require__.el("871@").then(function() { return function() { return __webpack_require__(/*! /home/runner/work/soundq/soundq/node_modules/react-dom/index.js */"935"); }; }); }, eager: 0 }, { name: "react", version: "16.14.0", factory: function() { return __webpack_require__.el("734@").then(function() { return function() { return __webpack_require__(/*! /home/runner/work/soundq/soundq/node_modules/react/index.js */"294"); }; }); }, eager: 0 }] }, uniqueName: "soundq" };
+__webpack_require__.initializeSharingData = { scopeToSharingDataMapping: { "default": [{ name: "react-dom", version: "18.2.0", factory: function() { return __webpack_require__.el("939@").then(function() { return function() { return __webpack_require__(/*! /home/runner/work/soundq/soundq/node_modules/react-dom/index.js */"935"); }; }); }, eager: 0 }, { name: "react", version: "18.2.0", factory: function() { return __webpack_require__.el("719@").then(function() { return function() { return __webpack_require__(/*! /home/runner/work/soundq/soundq/node_modules/react/index.js */"294"); }; }); }, eager: 0 }] }, uniqueName: "soundq" };
 __webpack_require__.I = function() { throw new Error("should have __webpack_require__.I") }
 
 }();
@@ -3762,7 +3762,7 @@ __webpack_require__.g = (function () {
 // webpack/runtime/consumes_loading
 !function() {
 
-__webpack_require__.consumesLoadingData = { chunkMapping: {"987":[],"512":[],"425":["886"],"637":["155"]}, moduleIdToConsumeDataMapping: { "155": { shareScope: "default", shareKey: "react", import: "react", requiredVersion: "^16.13.0", strictVersion: false, singleton: true, eager: false, fallback: function() { return __webpack_require__.el("155@").then(function() { return function() { return __webpack_require__(/*! react */"294"); }; }); } }, "886": { shareScope: "default", shareKey: "react-dom", import: "react-dom", requiredVersion: "^16.13.0", strictVersion: false, singleton: true, eager: false, fallback: function() { return __webpack_require__.el("886@").then(function() { return function() { return __webpack_require__(/*! react-dom */"935"); }; }); } } }, initialConsumes: [] };
+__webpack_require__.consumesLoadingData = { chunkMapping: {"106":["458"],"512":[],"425":["261"],"987":[]}, moduleIdToConsumeDataMapping: { "261": { shareScope: "default", shareKey: "react-dom", import: "react-dom", requiredVersion: "^18.2.0", strictVersion: false, singleton: true, eager: false, fallback: function() { return __webpack_require__.el("261@").then(function() { return function() { return __webpack_require__(/*! react-dom */"935"); }; }); } }, "458": { shareScope: "default", shareKey: "react", import: "react", requiredVersion: "^18.2.0", strictVersion: false, singleton: true, eager: false, fallback: function() { return __webpack_require__.el("458@").then(function() { return function() { return __webpack_require__(/*! react */"294"); }; }); } } }, initialConsumes: [] };
 __webpack_require__.f.consumes = function() { throw new Error("should have __webpack_require__.f.consumes") }
 }();
 // webpack/runtime/jsonp_chunk_loading
@@ -3785,7 +3785,7 @@ if (installedChunkData !== 0) {
 	if (installedChunkData) {
 		promises.push(installedChunkData[2]);
 	} else {
-		if ("637" != chunkId) {
+		if ("106" != chunkId) {
 			// setup Promise in chunk cache
 			var promise = new Promise(function (resolve, reject) {
 				installedChunkData = installedChunks[chunkId] = [resolve, reject];

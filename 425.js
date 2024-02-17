@@ -1,6 +1,7 @@
 (self['webpackChunksoundq'] = self['webpackChunksoundq'] || []).push([["425"], {
 "251": (function (__unused_webpack_module, exports, __webpack_require__) {
-/** @license React v16.14.0
+/**
+ * @license React
  * react-jsx-runtime.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -8,35 +9,29 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */ 'use strict';
-var f = __webpack_require__(/*! react */"155"), g = 60103;
-exports.Fragment = 60107;
-if ("function" === typeof Symbol && Symbol.for) {
-    var h = Symbol.for;
-    g = h("react.element");
-    exports.Fragment = h("react.fragment");
-}
-var m = f.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, n = Object.prototype.hasOwnProperty, p = {
+var f = __webpack_require__(/*! react */"458"), k = Symbol.for("react.element"), l = Symbol.for("react.fragment"), m = Object.prototype.hasOwnProperty, n = f.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, p = {
     key: !0,
     ref: !0,
     __self: !0,
     __source: !0
 };
-function q(c, a, k) {
-    var b, d = {}, e = null, l = null;
-    void 0 !== k && (e = "" + k);
+function q(c, a, g) {
+    var b, d = {}, e = null, h = null;
+    void 0 !== g && (e = "" + g);
     void 0 !== a.key && (e = "" + a.key);
-    void 0 !== a.ref && (l = a.ref);
-    for(b in a)n.call(a, b) && !p.hasOwnProperty(b) && (d[b] = a[b]);
+    void 0 !== a.ref && (h = a.ref);
+    for(b in a)m.call(a, b) && !p.hasOwnProperty(b) && (d[b] = a[b]);
     if (c && c.defaultProps) for(b in a = c.defaultProps, a)void 0 === d[b] && (d[b] = a[b]);
     return {
-        $$typeof: g,
+        $$typeof: k,
         type: c,
         key: e,
-        ref: l,
+        ref: h,
         props: d,
-        _owner: m.current
+        _owner: n.current
     };
 }
+exports.Fragment = l;
 exports.jsx = q;
 exports.jsxs = q;
 }),
@@ -53,7 +48,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 /* harmony import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */"893");
 /* harmony import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */"155");
+/* harmony import */var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */"458");
 /* harmony import */var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 function _define_property(obj, key, value) {
     if (key in obj) Object.defineProperty(obj, key, {
@@ -219,9 +214,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */"893");
 /* harmony import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */var _App__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App */"130");
-/* harmony import */var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */"155");
+/* harmony import */var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */"458");
 /* harmony import */var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */"886");
+/* harmony import */var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */"261");
 /* harmony import */var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
 
 
