@@ -3,7 +3,7 @@ const path = require('path');
 const package = require('./package.json');
 
 const isDevelopment = process.env.NODE_ENV === "development";
-const name = `${isDevelopment? "local_" : ""}${package.name}`;
+const name = `${isDevelopment? "local_" : ""}${package.name.replaceAll("-","_")}`;
 const port = 3002;
 
 module.exports = {
