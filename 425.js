@@ -194,9 +194,9 @@ var App = function(param) {
                                 /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
                                     type: "range",
                                     name: "ramp",
-                                    min: "0",
+                                    min: "0.0001",
                                     max: "1",
-                                    step: "0.001",
+                                    step: "0.0001",
                                     onChange: onChange,
                                     value: config.ramp || 1.0
                                 }),
