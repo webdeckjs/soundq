@@ -4,11 +4,13 @@ This is a simple plugin that allow you play any sound on key press
 
 ## Usage
 
-To use this plugin, paste the url to this repo into you plugins and you ready to go!
+To use this plugin, paste the url of this repo into you plugins and you ready to go!
 
 From there you can configure the notes you want to play on each key pressed.
 
 ## Contributing
+
+If you like to contribute to this plugin by adding new features or impoving existing ones, follow the steps bellow:
 
 ### Install dependencies
 

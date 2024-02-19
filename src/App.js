@@ -24,7 +24,7 @@ const App = ({ config, setConfig }) => {
   return (
     <div style={{ height: "100%", background: "pink"}} >
       <div style={{ padding: "2em" }}>
-        <h3>soundq plugin</h3>
+        <h3>SoundQ Plugin</h3>
         <div className="settings">
           <div className="setting">
             <label htmlFor="waveform">waveform: </label>
