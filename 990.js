@@ -200,7 +200,7 @@ var App = function(param) {
                                     onChange: onChange,
                                     value: config.ramp || 1.0
                                 }),
-                                config.ramp || 1.0
+                                parseFloat(config.ramp || 1.0).toFixed(4)
                             ]
                         })
                     ]
