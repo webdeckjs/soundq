@@ -192,12 +192,15 @@ var App = function(param) {
                                     children: "exponential ramp: "
                                 }),
                                 /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
-                                    type: "number",
+                                    type: "range",
                                     name: "ramp",
-                                    placeholder: "1.0",
+                                    min: "0",
+                                    max: "1",
+                                    step: "0.001",
                                     onChange: onChange,
-                                    value: config.ramp || ""
-                                })
+                                    value: config.ramp || 1.0
+                                }),
+                                config.ramp || 1.0
                             ]
                         })
                     ]
