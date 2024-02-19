@@ -176,7 +176,7 @@ var App = function(param) {
                                     children: "frequency: "
                                 }),
                                 /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
-                                    type: "text",
+                                    type: "number",
                                     name: "frequency",
                                     placeholder: "403",
                                     onChange: onChange,
@@ -192,7 +192,7 @@ var App = function(param) {
                                     children: "exponential ramp: "
                                 }),
                                 /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
-                                    type: "text",
+                                    type: "number",
                                     name: "ramp",
                                     placeholder: "1.0",
                                     onChange: onChange,
