@@ -1,6 +1,6 @@
 # 🔌 webdeck-soundq
 
-This is a simple plugin that allow you play any sound on key press
+This is a simple plugin that allow you play any sound on key press for [webdeck](https://github.com/webdeckjs/webdeck)
 
 ## Usage
 
