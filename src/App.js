@@ -38,11 +38,11 @@ const App = ({ config, setConfig }) => {
           </div>
           <div className="setting">
             <label htmlFor="frequency">frequency: </label>
-            <input type="text" name="frequency" placeholder="403" onChange={onChange} value={config.frequency || ""} />
+            <input type="number" name="frequency" placeholder="403" onChange={onChange} value={config.frequency || ""} />
           </div>
           <div className="setting">
             <label htmlFor="ramp">exponential ramp: </label>
-            <input type="text" name="ramp" placeholder="1.0" onChange={onChange} value={config.ramp || ""} />
+            <input type="number" name="ramp" placeholder="1.0" onChange={onChange} value={config.ramp || ""} />
           </div>
         </div>
       </div>
