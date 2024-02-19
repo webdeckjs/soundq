@@ -42,7 +42,9 @@ const App = ({ config, setConfig }) => {
           </div>
           <div className="setting">
             <label htmlFor="ramp">exponential ramp: </label>
-            <input type="number" name="ramp" placeholder="1.0" onChange={onChange} value={config.ramp || ""} />
+            <input type="range" name="ramp" min="0" max="1"  step="0.001" onChange={onChange} value={config.ramp || 1.0} /> 
+            {config.ramp || 1.0}
+            {/* <input type="number" name="ramp" placeholder="1.0" onChange={onChange} value={config.ramp || ""} /> */}
           </div>
         </div>
       </div>
