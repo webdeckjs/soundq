@@ -164,6 +164,9 @@ var U = {
     ReactCurrentBatchConfig: V,
     ReactCurrentOwner: K
 };
+function X() {
+    throw Error("act(...) is not supported in production builds of React.");
+}
 exports.Children = {
     map: S,
     forEach: function(a, b, e) {
@@ -195,6 +198,7 @@ exports.PureComponent = G;
 exports.StrictMode = q;
 exports.Suspense = w;
 exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = W;
+exports.act = X;
 exports.cloneElement = function(a, b, e) {
     if (null === a || void 0 === a) throw Error("React.cloneElement(...): The argument must be a React element, but you passed " + a + ".");
     var d = C({}, a.props), c = a.key, k = a.ref, h = a._owner;
@@ -281,9 +285,7 @@ exports.startTransition = function(a) {
         V.transition = b;
     }
 };
-exports.unstable_act = function() {
-    throw Error("act(...) is not supported in production builds of React.");
-};
+exports.unstable_act = X;
 exports.useCallback = function(a, b) {
     return U.current.useCallback(a, b);
 };
@@ -327,7 +329,7 @@ exports.useSyncExternalStore = function(a, b, e) {
 exports.useTransition = function() {
     return U.current.useTransition();
 };
-exports.version = "18.2.0";
+exports.version = "18.3.1";
 }),
 "294": (function (module, __unused_webpack_exports, __webpack_require__) {
 'use strict';

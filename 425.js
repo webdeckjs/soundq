@@ -97,15 +97,26 @@ function _object_spread_props(target, source) {
 var context = new AudioContext();
  var onPress = function(param) {
     var config = param.config;
-    var o = context.createOscillator();
-    var g = context.createGain();
-    o.type = config.waveform || "sine";
-    o.frequency.value = config.frequency || 100;
-    o.connect(g);
-    g.connect(context.destination);
-    o.start(0);
-    g.gain.exponentialRampToValueAtTime(config.ramp || 1.0, context.currentTime + 2);
-    o.stop(context.currentTime + 2);
+    // Create Nodes
+    var osc = context.createOscillator();
+    var gain = context.createGain();
+    var filter = context.createBiquadFilter();
+    filter.frequency.setValueAtTime(config.filterFreq, context.currentTime, 0);
+    gain.gain.setValueAtTime(config.gain, context.currentTime);
+    osc.type = config.waveform || "sine";
+    osc.frequency.value = config.frequency || 100;
+    // Connect Nodes
+    osc.connect(filter);
+    filter.connect(context.destination);
+    osc.connect(gain);
+    gain.connect(context.destination);
+    // Play
+    osc.start(0);
+    // g.gain.exponentialRampToValueAtTime(
+    //     config.ramp || 1.0,
+    //     context.currentTime + 2
+    // );
+    osc.stop(context.currentTime + 2);
 };
 var App = function(param) {
     var config = param.config, setConfig = param.setConfig;
@@ -124,7 +135,7 @@ var App = function(param) {
             },
             children: [
                 /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h3", {
-                    children: "SoundQ Plugin"
+                    children: "SoundQ Oscillator Plugin"
                 }),
                 /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                     className: "settings",
@@ -134,7 +145,7 @@ var App = function(param) {
                             children: [
                                 /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("label", {
                                     htmlFor: "waveform",
-                                    children: "waveform: "
+                                    children: "Waveform: "
                                 }),
                                 /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("select", {
                                     required: true,
@@ -172,8 +183,47 @@ var App = function(param) {
                             className: "setting",
                             children: [
                                 /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("label", {
+                                    htmlFor: "filterType",
+                                    children: "Filter Type: "
+                                }),
+                                /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("select", {
+                                    required: true,
+                                    name: "filterType",
+                                    onChange: onChange,
+                                    value: config.filterType || "",
+                                    children: [
+                                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                                            value: "",
+                                            disabled: true,
+                                            hidden: true,
+                                            children: "lowpass"
+                                        }),
+                                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                                            value: "lowpass",
+                                            children: "Low Pass"
+                                        }),
+                                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                                            value: "highpass",
+                                            children: "High Pass"
+                                        }),
+                                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                                            value: "bandpass",
+                                            children: "Band Pass"
+                                        }),
+                                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                                            value: "lowshelf",
+                                            children: "Low Shelf"
+                                        })
+                                    ]
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: "setting",
+                            children: [
+                                /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("label", {
                                     htmlFor: "frequency",
-                                    children: "frequency: "
+                                    children: "Frequency: "
                                 }),
                                 /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
                                     type: "number",
@@ -188,8 +238,27 @@ var App = function(param) {
                             className: "setting",
                             children: [
                                 /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("label", {
+                                    htmlFor: "filterFreq",
+                                    children: "Filter Freq: "
+                                }),
+                                /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                                    type: "range",
+                                    name: "filterFreq",
+                                    min: "30",
+                                    max: "1000",
+                                    step: "1",
+                                    onChange: onChange,
+                                    value: config.filterFreq || 1.0
+                                }),
+                                parseFloat(config.filterFreq || 1.0).toFixed(0)
+                            ]
+                        }),
+                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: "setting",
+                            children: [
+                                /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("label", {
                                     htmlFor: "ramp",
-                                    children: "exponential ramp: "
+                                    children: "Ramp: "
                                 }),
                                 /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
                                     type: "range",
@@ -201,6 +270,25 @@ var App = function(param) {
                                     value: config.ramp || 1.0
                                 }),
                                 parseFloat(config.ramp || 1.0).toFixed(4)
+                            ]
+                        }),
+                        /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: "setting",
+                            children: [
+                                /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("label", {
+                                    htmlFor: "ramp",
+                                    children: "Gain: "
+                                }),
+                                /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                                    type: "range",
+                                    name: "gain",
+                                    min: "0.0001",
+                                    max: "1",
+                                    step: "0.0001",
+                                    onChange: onChange,
+                                    value: config.gain || 1.0
+                                }),
+                                parseFloat(config.gain || 1.0).toFixed(4)
                             ]
                         })
                     ]

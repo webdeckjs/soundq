@@ -3602,7 +3602,7 @@ __webpack_require__.e = function (chunkId) {
 }();
 // webpack/runtime/load_chunk_with_block
 !function() {
-var map = {"261@": ["987"], "358@./Plugin": ["106"], "458@": ["512"], "537@0:21": ["106", "425"], "719@": ["512"], "939@": ["987", "106"]};
+var map = {"261@": ["987"], "358@./Plugin": ["106"], "458@": ["512"], "537@0:21": ["106", "425"], "798@": ["987", "106"], "80@": ["512"]};
 
 __webpack_require__.el = function(module) {
   var chunkIds = map[module];
@@ -3659,7 +3659,7 @@ __webpack_require__.n = function (module) {
 !function() {
 
 __webpack_require__.S = {};
-__webpack_require__.initializeSharingData = { scopeToSharingDataMapping: { "default": [{ name: "react-dom", version: "18.2.0", factory: function() { return __webpack_require__.el("939@").then(function() { return function() { return __webpack_require__(/*! /home/runner/work/soundq/soundq/node_modules/react-dom/index.js */"935"); }; }); }, eager: 0 }, { name: "react", version: "18.2.0", factory: function() { return __webpack_require__.el("719@").then(function() { return function() { return __webpack_require__(/*! /home/runner/work/soundq/soundq/node_modules/react/index.js */"294"); }; }); }, eager: 0 }] }, uniqueName: "soundq" };
+__webpack_require__.initializeSharingData = { scopeToSharingDataMapping: { "default": [{ name: "react-dom", version: "18.3.1", factory: function() { return __webpack_require__.el("798@").then(function() { return function() { return __webpack_require__(/*! /home/runner/work/soundq/soundq/node_modules/react-dom/index.js */"935"); }; }); }, eager: 0 }, { name: "react", version: "18.3.1", factory: function() { return __webpack_require__.el("80@").then(function() { return function() { return __webpack_require__(/*! /home/runner/work/soundq/soundq/node_modules/react/index.js */"294"); }; }); }, eager: 0 }] }, uniqueName: "soundq" };
 __webpack_require__.I = function() { throw new Error("should have __webpack_require__.I") }
 
 }();
